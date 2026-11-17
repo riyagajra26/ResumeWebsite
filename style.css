@@ -1,0 +1,271 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #172554;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Home Section */
+.home {
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: scale-down;
+    border: 5px solid white;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.home h1 span {
+    color: #2563eb;
+}
+
+.home h3 {
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.home p {
+    max-width: 550px;
+    margin: 0 auto 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+}
+
+/* Common Section */
+.section {
+    padding: 55px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #172554;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 22px;
+    margin: 15px auto;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-container span {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 12px 22px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Achievements */
+.achievement-list {
+    display: inline-block;
+    text-align: left;
+    line-height: 2.2;
+}
+
+/* Contact */
+.contact-card {
+    line-height: 2.2;
+}
+
+.contact-card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.dark-mode .section h2 {
+    color: #93c5fd;
+}
+
+.dark-mode .card {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+
+.dark-mode .home {
+    background: linear-gradient(135deg, #1e293b, #111827);
+}
+
+.dark-mode .home h3 {
+    color: #cbd5e1;
+}
+
+.dark-mode .skills-container span {
+    background-color: #334155;
+    color: #bfdbfe;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: inline-block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .home h1 {
+        font-size: 27px;
+    }
+
+    .section {
+        padding: 40px 6%;
+    }
+}
